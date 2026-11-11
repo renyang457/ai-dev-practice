@@ -1,0 +1,16 @@
+# 虚拟环境与 IDE
+.venv/
+.idea/
+.vscode/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 日志是数据，不进仓库（可用 train3.py 重新生成）
+*.log
+
+# 操作系统
+.DS_Store
+Thumbs.db
