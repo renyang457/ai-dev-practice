@@ -1,0 +1,5 @@
+# D1–D2 实际用到的第三方依赖
+PyMySQL==1.2.4
+
+# D4 起（FastAPI 从零七课）追加：fastapi / uvicorn[standard] / pytest / httpx
+# 安装：.venv\Scripts\pip.exe install fastapi "uvicorn[standard]" pytest httpx
