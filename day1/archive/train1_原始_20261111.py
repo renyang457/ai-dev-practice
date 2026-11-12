@@ -1,15 +1,15 @@
 # # 装饰器的三层结构
-# def time1(num): # num为装饰器参数
-#     def decorator(func): # func为被装饰的函数
-#         def inner(*args, **kwargs): # inner内接收被装饰函数的参数
-#             print("这是装饰器功能")
-#             return func(*args, **kwargs) # 返回装饰后函数的执行结果
-#         return inner # 返回内层函数
-#     return decorator  # 返回装饰器
-# @time1(3) #3为装饰器参数
-# def func(x):
-#     return "func"
-# func(1)
+def time1(num): # num为装饰器参数
+    def decorator(func): # func为被装饰的函数
+        def inner(*args, **kwargs): # inner内接收被装饰函数的参数
+            print("这是装饰器功能")
+            return func(*args, **kwargs) # 返回装饰后函数的执行结果
+        return inner # 返回内层函数
+    return decorator  # 返回装饰器
+@time1(3) #3为装饰器参数
+def func(x):
+    return "func"
+func(1)
 # @timer	打印函数名和执行耗时（保留 4 位小数）
 import functools
 import time
