@@ -103,6 +103,21 @@ $env:DB_PASSWORD="<你的密码>"; $env:DB_NAME="logdb"
 
 Windows 11 + WSL2、Python 3.12、Docker Desktop 29.2.1、MySQL 8.0.45（容器）。
 
+## 快速开始
+
+```powershell
+python -m venv .venv
+.venv\Scripts\pip.exe install -r requirements.txt
+```
+
+数据库和日志分析需要先设 5 个环境变量（见上面 D2 那段），然后：
+
+```powershell
+.venv\Scripts\python.exe -m day1.log_analysis.log_analyze
+```
+
+D4 起还需要 `fastapi` / `uvicorn[standard]` / `pytest` / `httpx`，届时追加到 `requirements.txt`。
+
 ## 说明
 
 - `*.log` 不入库（8MB 测试数据，需要时重新生成即可）。
